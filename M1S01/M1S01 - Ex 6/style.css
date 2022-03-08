@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+.main {
+  width: 100%;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+}
+.images {
+  padding: 16px;
+  height: 162px;
+}
+.imgs {
+  float: left;
+  padding: 5px;
+  width: 10%;
+}
+figcaption {
+  text-align: center;
+}
