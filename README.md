@@ -1,3 +1,3 @@
 # DEVinHouse
 
-Repositório de exercícios e projetos feitos no DEVinAudaces 2022.
+Repositório de exercícios e projetos feitos no DEVin[Audaces] 2022.
