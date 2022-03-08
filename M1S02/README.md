@@ -1,1 +1,1 @@
-Respostas dos Exercícios da Semana 2.
+Respostas dos Exercícios da Semana 2 - JavaScript
