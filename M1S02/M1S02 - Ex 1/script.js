@@ -1,1 +1,3 @@
-M1S02 - Ex 1
+// Exercício 1 //
+
+console.log('Olá desenvolvedor!');
