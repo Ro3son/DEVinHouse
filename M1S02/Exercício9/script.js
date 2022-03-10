@@ -17,3 +17,9 @@ var somaRow0 = notas[0][0] + notas[0][1] + notas[0][2] + notas[0][3],
   somaRow2 = notas[2][0] + notas[2][1] + notas[2][2] + notas[2][3],
   somaRow3 = notas[3][0] + notas[3][1] + notas[3][2] + notas[3][3];
 console.log(somaRow0, somaRow1, somaRow2, somaRow3); // 33.5, 29, 34.5, 36.5
+
+// somar as notas dos "primeiros elementos" de cada array interno.
+
+var somaNotasPrimeirosElementos =
+  notas[0][0] + notas[1][0] + notas[2][0] + notas[3][0];
+console.log(somaNotasPrimeirosElementos); // 35.5
