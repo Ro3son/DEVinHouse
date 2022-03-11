@@ -13,12 +13,9 @@ O time Tabajara F.C tem:
 6 empates
 
 */
-var vitoria = 3,
-    derrota = 0,
-    empate = 1;
 var tabajaraVitorias = 12,
     tabajaraDerrotas = 2,
     tabajaraEmpates = 6;
-var numPontos = ((tabajaraVitorias * vitoria) + (tabajaraDerrotas * derrota) + (tabajaraEmpates * empate)); // 42 pontos
-var numPartidas = ((tabajaraVitorias) + (tabajaraDerrotas) + (tabajaraEmpates)); // 20 partidas
+var numPontos = ((tabajaraVitorias * 3) + (tabajaraEmpates * 1));
+var numPartidas = ((tabajaraVitorias) + (tabajaraDerrotas) + (tabajaraEmpates));
 console.log("O time Tabajara F.C acumulou " + numPontos + " pontos após jogar " + numPartidas + " partidas.");
