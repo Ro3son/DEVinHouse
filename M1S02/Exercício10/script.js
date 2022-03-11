@@ -20,7 +20,9 @@ e imprima o resultado no console. (* Dica: crie uma variável 'saldo' inicializa
 
 var saldo = 0;
 saldo = 100;
+
 extrato.sort((a, b) => b - a); // [ 100, 55, -5, -15, -20, -35 ]
+
 for (var i = 0; i < extrato.length - 3; i++) {
   if (extrato[i] < 0) {
     var debito = extrato.slice(2, 6); // [ -5, -15, -20, -35 ]
@@ -30,5 +32,6 @@ for (var i = 0; i < extrato.length - 3; i++) {
     var resultadoSaldoFinal = resultadoSaldo > 0 ? "saldo positivo" : "saldo negativo";
   }
 }
+
 console.log(`Saldo Final: ${resultadoSaldo} reais. 
 ${resultadoSaldoFinal}`);
