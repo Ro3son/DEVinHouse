@@ -6,14 +6,17 @@ var sorteados = [
     [60, 25, 11, 34, 6, 9],    // linha 3
     [55, 43, 25, 12, 7, 11]    // linha 4
 ];
-var count = 0;
-for (var i = 0; i < sorteados.length; i++) { // percorre as linhas de 0 a 4
-    var num = sorteados[i]; // armazena os arrays internos
-    for (var j = 0; j < num.length; j++) {
-        if ( num[j] === 25) {   // percorre cada elemento das arrays
-            count++;
+const numSorteados = (count) => {
+    count = 0;
+    for (var i = 0; i < sorteados.length; i++) { // percorre as linhas de 0 a 4
+        var num = sorteados[i]; // armazena os arrays internos
+        for (var j = 0; j < num.length; j++) {
+            if (num[j] === 25) {   // percorre cada elemento das arrays
+                count++;
+            }
         }
     }
+    console.log('Número da sorte sorteado foi ' + count);
 }
-console.log('Número da sorte sorteado foi ' + count);
+numSorteados();
 
