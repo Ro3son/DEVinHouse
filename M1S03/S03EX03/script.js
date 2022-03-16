@@ -76,8 +76,10 @@ var ul = document.createElement("ul");
 ul.id = "ul";
 ul.setAttribute(
     "style",
-    "display: flex; justify-content: space-between; align-items: center; padding: 40px; margin: 16px; color: #f08d49; font-size: 1em; font-family: courier; text-align: center; list-style-type: none"
+    "display: flex; justify-content: space-between; align-items: center; padding: 40px; margin: 16px; font-size: 1em; font-family: courier"
 );
+ul.style.color = "#f08d49";
+ul.style.listStyleType = "none";
 //Remove elements <li>
 ul.remove("li");
 
