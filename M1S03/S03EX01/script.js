@@ -1,4 +1,4 @@
-//S03EX01
+//S03EX01//
 
 function celsiusToFahrenheit(celsius) {
     celsius = (celsius * 9) / 5 + 32;    // constantes dentro da função
