@@ -1,7 +1,7 @@
 //S03EX01//
 
 function celsiusToFahrenheit(celsius) {
-    celsius = (celsius * 9) / 5 + 32;    // constantes dentro da função
+    celsius = (celsius * 9) / 5 + 32;    // Constantes dentro da função
     console.log(`${celsius}°F`);
 }
 celsiusToFahrenheit(77); // 170.6°F
