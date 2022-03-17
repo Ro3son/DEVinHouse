@@ -84,3 +84,10 @@ function hideVideo() {
     video.style.display == "block";
   }
 }
+
+//Perfil//
+
+const h3 = document.createElement('h3');
+h3.setAttribute("style", "font-size: 0.6em; text-align: center");
+document.getElementById('perfil').append(h3);
+
