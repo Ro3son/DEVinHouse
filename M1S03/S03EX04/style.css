@@ -15,6 +15,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 8px;
+  background-color: wheat;
   height: 400px;
   padding: 16px;
   margin: auto;
