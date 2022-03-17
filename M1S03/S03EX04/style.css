@@ -4,8 +4,6 @@
   padding: 0;
 }
 body {
-  padding: 0 auto;
-  margin: 0 auto;
   font-family: monospace;
   background-color: wheat;
   font-size: 8em;
@@ -13,23 +11,17 @@ body {
   width: 100%;
 }
 .navbar {
-  height: 500px;
-  padding: 16px;
-  margin: 16px;
-}
-ul {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 12px;
-  gap: 0.6em;
-  list-style-type: none;
+  gap: 8px;
+  height: 400px;
+  padding: 16px;
+  margin: auto;
 }
-li {
+span {
   background-color: #2a2d2f;
-  padding: 10px;
+  padding: 8px;
 }
 a {
   color: #ffffff;
