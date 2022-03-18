@@ -5,7 +5,7 @@
 }
 body {
   font-family: monospace;
-  background-color: wheat;
+  background-color: #2a2d2f;
   font-size: 8em;
   font-weight: bold;
   width: 100%;
@@ -15,20 +15,21 @@ body {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  background-color: wheat;
-  height: 400px;
+  height: 200px;
   padding: 16px;
   margin: auto;
 }
 span {
-  background-color: #2a2d2f;
+  border: 2px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #00f8c0, #2475ff);
   padding: 8px;
 }
 a {
-  color: #ffffff;
+  color: #d9eee1;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
-  text-decoration-color: #ffffff;
+  text-decoration-color: #d9eee1;
 }
