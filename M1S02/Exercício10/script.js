@@ -44,6 +44,6 @@ var saldo2 = 0;
 
 extrato.sort((a, b) => b - a); // [ 100, 55, -5, -15, -20, -35 ]
 for (var i = 0; i < extrato.length; i++) {
-  saldo2 = saldo2 + extrato[i];
+  saldo2 = saldo2 + extrato[i]; // 100 + 55 - 5 - 15 - 20 - 35 = 80 
 }
 console.log(saldo2);
