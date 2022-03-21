@@ -18,7 +18,7 @@ function projecaoPopulacaoBR() {
       p.innerText = `${data.projecao.populacao}`;
       p.setAttribute(
         "style",
-        "font-size: 2.4em; text-align: center; font-family: monospace; color: #ffffff"
+        "font-size: 4em; text-align: center; font-family: monospace; color: #193392"
       );
       document.querySelector("body").append(main);
       document.querySelector("main").append(h1);
