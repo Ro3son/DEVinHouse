@@ -3,10 +3,10 @@ function projecaoPopulacaoBR() {
     "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/BR";
 
   fetch(requestURL)
-    .then(function (response) {
+    .then(function(response) {
       return response.json();
     })
-    .then(function (data) {
+    .then(function(data) {
       const main = document.createElement("main"),
         h1 = document.createElement("h1");
       p = document.createElement("p");
