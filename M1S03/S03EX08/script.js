@@ -1,6 +1,6 @@
 function projecaoPopulacaoBR() {
-    const requestURL =
-        "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/";
+    
+    const requestURL = "https://servicodados.ibge.gov.br/api/v1/projecoes/populacao/";
 
     fetch(requestURL)
         .then(function (response) {
