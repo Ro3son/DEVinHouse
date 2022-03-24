@@ -1,31 +1,33 @@
-const nomesFamiliares = ['Robson', 'Kamila', 'Iolanda', 'Cicero', 'Braulina'];
+const nomesFamiliares = ['Robson'];
 
-nomesFamiliares.forEach( function(element) {
+nomesFamiliares.forEach(function (element, index) {
     const li = document.createElement('li');
-    li.setAttribute('value', element);
+    li.value = index;
     li.innerText = element;
     document.querySelector('ul').append(li);
 })
 
 let selector = document.querySelector("#list");
 
-const requestURL = `https://servicodados.ibge.gov.br/api/v2/censos/nomes/${selector.type}`;
+const requestURL = `https://servicodados.ibge.gov.br/api/v2/censos/nomes/${selector.innerText}`;
 
 fetch(requestURL)
-.then( function(response) {
-    return response.json();
-})
-.then( function(data) {
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (data) {
 
-    const p = document.createElement('p');
+        let dataNomes = data;
 
-    let censoNomes = data.nomes;
+        console.log(dataNomes);
 
-    console.log(censoNomes);
-   
-    if (selector.type == 'Robson') {
-        p.innerText = `${censoNomes}`;
-    }
-    document.body.appendChild(p);
-})
+        for (object of data) {
+            const p = document.createElement('p');
+
+            if (selector.innerText == 'Robson') {
+                p.innerText = `Frequencia: ${object.res[0].frequencia}`;
+            }
+            document.querySelector('ul').append(p);
+        }
+    })
 
