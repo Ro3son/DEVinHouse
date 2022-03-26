@@ -1,5 +1,5 @@
 /*
-[M1S4] Ex 4 - Use funções de arrays Map()
+[M1S4] Ex 4 - Use funções de arrays Map
 
 Re-escreva o trecho de código abaixo usando a função map
 O resultado é uma novo array com o triplo do valor de cada elemento.
