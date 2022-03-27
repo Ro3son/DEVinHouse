@@ -19,7 +19,7 @@ const aprovados = [];
 
 // Usando filter //
 
-notas.filter(function (nota) {
+notas.filter(function(nota) {
     if (nota >= 7) {
         return aprovados.push(nota)
     }
