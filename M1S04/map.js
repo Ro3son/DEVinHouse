@@ -1,8 +1,8 @@
 /*
-[M1S4] Ex 4 - Use funções de arrays Map
+[M1S4] Ex 4 - Use funções de arrays (map)
 
-Re-escreva o trecho de código abaixo usando a função map
-O resultado é uma novo array com o triplo do valor de cada elemento.
+Re-escreva o trecho de código abaixo usando a função map.
+O resultado é um novo array com o triplo do valor de cada elemento.
 
 */
 
