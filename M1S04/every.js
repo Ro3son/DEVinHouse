@@ -5,7 +5,7 @@ sabendo que a nota mínima para aprovação é 7 (inclusive).
 Imprima o resultado no console.
 
 // Se os elementos da minha array for maior ou igual a 7..
-Every() method deve retornar true, se satisfaz a condição, caso contrário retorna false.
+Every() method deve retornar true se satisfaz a condição, caso contrário retorna false.
 */
 const notas = [10, 9, 10, 7, 9, 6, 9, 10, 7, 9];
 
