@@ -19,14 +19,17 @@ Percorra o elemento da array pelo seu index e veja seu comprimento.
 */
 const senhas = ['abc123', 'super-secreta', '42', 'senha', '007'];
 
+let resultado = [];
+
 senhas.map(function(elemento) {
     // Conditional operator "?" //
-    let resultado = (elemento.length >= 4 && elemento.length <= 10) ? 'true' : 'false';
-    console.log(resultado);
-    
+    return resultado.push((elemento.length >= 4 && elemento.length <= 10) ? 'true' : 'false');
+    // O mesmo que: 
+
     // if (elemento.length >= 4 && elemento.length <= 10) {
     //     console.log('true');
     // } else {
     //     console.log('false');
     // }
 })
+console.log(resultado);
