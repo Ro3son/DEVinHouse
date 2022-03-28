@@ -1,8 +1,8 @@
 /*
 [M1S4] Ex 13 - Use Classes e Herança (POO)
 
-Crie a classe 'Animal' com os atributos 'nome', 'idade' e 'som'.
-Em seguida crie as subclasses (de Animal) 'Cachorro' e 'Gato' com os atributos 'nome' e 'idade'.
+Crie a classe 'Animal' com os atributos 'nome', 'idade' e 'som',
+em seguida crie as subclasses (de Animal) 'Cachorro' e 'Gato' com os atributos 'nome' e 'idade'.
 Inicialize o atributo 'som' da superclasse com 'latido' e 'miado'.
 Crie instâncias para cada subclasse.
 
