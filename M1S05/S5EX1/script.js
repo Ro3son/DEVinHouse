@@ -35,11 +35,11 @@ function desabilitaElementosESoma() {
 
     arrayInputs = Array.from(input);
 
-    arrayInputs.forEach((input, sum) => {
+    arrayInputs.forEach((input, add) => {
         input.disabled = true;
-        sum = parseInt(input.value);
-        if (!isNaN(sum)) {
-            soma = soma + sum;
+        add = parseInt(input.value);
+        if (!isNaN(add)) {
+            soma += add;
         }
     });
     // arrayInputs.reduce(function(soma, atual) {
