@@ -4,7 +4,7 @@ const div = document.createElement('div');
 
 div.id = 'flex-container';
 
-div.setAttribute('style', 'display: flex; justify-content: center; align-items: center; gap: 0.4em; height: 300px; padding: 16px');
+div.setAttribute('style', 'display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 0.4em; height: 400px; padding: 16px');
 document.querySelector('body').appendChild(div);
 
 const inputs = ['input1', 'input2', 'input3', 'input4'];
@@ -28,14 +28,31 @@ let btn = document.getElementById('btn');
 btn.addEventListener('click', criaGrupoDeArrays);
 
 function criaGrupoDeArrays() {
+    const input = document.querySelectorAll('input'); // nodeList //
 
-    const input = document.querySelectorAll('input'); // nodeCollection //
+    const inputArray = Array.from(input); // Array //
 
-    inputArray = Array.from(input);
+    let span;
+    // Array de arrays //
+    let grupo1 = inputArray.filter((input) => (parseFloat(input.value) >= 0 && 
+    parseFloat(input.value) <= 1) ? true : false);
 
-    inputArray.map(function(grupo1, grupo2) {
-        grupo1 = inputs.slice(0, 2); // [ "input1", "input2" ]
-        grupo2 = inputs.slice(2, 4); //[ "input3", "input4" ]
-        });
+    grupo1 = grupo1.map((input) => {
+        const span = document.createElement('span');
+        const corDinamica = '#' + Math.floor(input.value * 16777215).toString(16);
+        span.innerText = corDinamica;
+        span.style.backgroundColor = corDinamica;
+        document.querySelectorAll('span').forEach((item) => item.remove());
+        return [span, input];
+
+    });
+    grupo1.forEach((item) => {
+        const span = item[0];
+        const input = item[1];
+        input.insertAdjacentElement('afterend', span);
+        input.style.border = '1px solid grey';
+    });
+
+    const grupo2 = inputArray.filter((input) => (!(parseFloat(input.value) == 0 && 
+    parseFloat(input.value) == 1) ? input : null));    
 }
-criaGrupoDeArrays();
