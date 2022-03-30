@@ -49,5 +49,7 @@ function desabilitaElementosESoma() {
     const h1 = document.createElement('h1');
     h1.setAttribute('style', 'padding: 4px; text-align: center; color: #d9eee1');
     h1.innerText = `A soma é: ${soma}`;
+    document.querySelectorAll('h1').forEach((item) => item.remove());
     document.querySelector('body').append(h1);
+    
 }
