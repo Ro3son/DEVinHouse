@@ -13,15 +13,8 @@ fetch(requestURL)
 
     let armazenaNomes = dados;
 
-    console.log(armazenaNomes);
+    let nomes = armazenaNomes.slice(0, 10);
+    
+    console.table(nomes);
 
-    let input = document.querySelector('input');
-    input.addEventListener('keypress', listaNomes);
-
-    function listaNomes() {
-        const nomes = armazenaNomes.filter(function(nome) {
-           
-        });
-        console.log(nomes);
-    }
 });
