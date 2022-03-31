@@ -28,15 +28,13 @@ let btn = document.getElementById('btn');
 btn.addEventListener('click', criaGrupoDeArrays);
 
 function criaGrupoDeArrays() {
-    const input = document.querySelectorAll('input'); // nodeList //
+    const input = document.querySelectorAll('input');
 
-    const inputArray = Array.from(input); // Array //
-
-    let span;
-    // Array de arrays //
+    const inputArray = Array.from(input);
+    
     let grupo1 = inputArray.filter((input) => (parseFloat(input.value) >= 0 && 
     parseFloat(input.value) <= 1) ? true : false);
-
+    
     grupo1 = grupo1.map((input) => {
         const span = document.createElement('span');
         const corDinamica = '#' + Math.floor(input.value * 16777215).toString(16);
@@ -44,8 +42,8 @@ function criaGrupoDeArrays() {
         span.style.backgroundColor = corDinamica;
         document.querySelectorAll('span').forEach((item) => item.remove());
         return [span, input];
-
     });
+
     grupo1.forEach((item) => {
         const span = item[0];
         const input = item[1];
@@ -53,6 +51,7 @@ function criaGrupoDeArrays() {
         input.style.border = '1px solid grey';
     });
 
-    const grupo2 = inputArray.filter((input) => (!(parseFloat(input.value) == 0 && 
-    parseFloat(input.value) == 1) ? input : null));    
+    const grupo2 = inputArray.filter((input) => (!(parseFloat(input.value) >= 0 && 
+    parseFloat(input.value) <= 1) ? input : null));   
+    
 }
