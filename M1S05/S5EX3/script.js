@@ -5,7 +5,7 @@ const div = document.createElement('div'),
     input = document.createElement('input');
 
 div.id = 'container';
-div.setAttribute('style', 'display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 1em; height: 140px; padding: 16px; margin: auto')
+div.setAttribute('style', 'display: flex; flex-direction: column; justify-content: center; align-items: center; height: 140px; padding: 16px');
 
 h1.innerText = 'Digite um nome: ';
 
@@ -51,7 +51,7 @@ fetch(requestURL)
             document.querySelector('ul').append(li);
         };
 
-        let input = querySelector('input');
+        let input = document.querySelector('input');
         input.addEventListener('keypress', buscaNome);
 
         function buscaNome(event) {
