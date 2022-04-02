@@ -1,6 +1,9 @@
-Para reforçar os conhecimentos da semana 4 e aprofundar as possibilidades da semana 3 vamos...
+Filtrar dados de uma API de nomes
 
-1- Crie um input de texto simples. Centralize e torne maior.
+Escrever um programa em que o usuário faz uma busca por nomes 
+e tem como resultado uma lista de nomes correspondente.
+
+1- Crie um input de texto.
 
 2-Dado a URL que retorna um array de nomes
 https://servicodados.ibge.gov.br/api/v1/censos/nomes/ranking?qtd=100000
@@ -12,29 +15,14 @@ Realize a requisição e armazene o resultado em uma variável disponível globa
 
 A) Utilizando o método de array Filter, crie um novo array contendo apenas os nomes que contém um trecho do texto digitado pelo usuário.
 
-B) Mostre para o usuário em uma div a quantidade de nomes encontrador, e liste-os usando uma lista (ul ou ol) ou tabela (table).
+B) Mostre para o usuário em uma div a quantidade de nomes encontrado, e liste-os usando uma lista (ul ou ol) ou tabela (table).
 
 
-1. Entendendo o problema:
+Para cada 'chave' do objeto de armazenaNomes cria uma lista.
+Cada lista deve conter o atributo innerText com nome, rank e frequência.
+Filta os nomes da variável armazenaNomes quando o valor da entrada for digitado.
+Espera como saída a lista de nomes, rank e frequência.
 
-Criar um input de texto.
-
-ENTRA uma letra qualquer ou um nome.
-
-Tenho um 'evento de teclado' filtrando os nomes.
-
-Buscar os dados da API com fetch.
-
-SAI a lista de nomes em table.
+Sometimes it is also useful to use loops if we need to calculate some other aspects based on data within the array or list of elements.
 
 
-2. Planejando o problema:
-
-Tenho uma user interface cuja entrada é fornecida pelo usuário.
-
-Tenho uma ação com a entrada do usuário cuja saída é o conteúdo requisitado.
-
-3. Dividindo o problema:
-
-3.1 - Criando o elemento input, div, table.
-3.2 - Fazendo a requisição.
