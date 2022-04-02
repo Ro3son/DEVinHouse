@@ -25,4 +25,6 @@ Espera como saída a lista de nomes, rank e frequência.
 
 Sometimes it is also useful to use loops if we need to calculate some other aspects based on data within the array or list of elements.
 
+https://pt.stackoverflow.com/questions/3021/como-posso-checar-se-uma-string-cont%C3%A9m-outra-em-javascript
+
 
