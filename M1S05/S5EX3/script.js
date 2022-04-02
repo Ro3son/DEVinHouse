@@ -24,7 +24,7 @@ fetch(requestURL)
         return response.json();
     })
     .then((dados) => {
-
+        // Variável que armazena 100.000 nomes //
         let armazenaNomes = dados;
 
         const div1 = document.createElement('div'),
@@ -33,6 +33,7 @@ fetch(requestURL)
             ul = document.createElement('ul');
 
         div1.id = 'flex-container';
+        div1.setAttribute('style', 'display: flex; justify-content: center');
 
         div2.id = 'container-nomes';
 
@@ -43,18 +44,18 @@ fetch(requestURL)
         document.getElementById('container-nomes').append(h2);
         document.getElementById('container-nomes').append(ul);
 
-        for (objeto of armazenaNomes) {
-            const li = document.createElement('li');
-            li.innerText = `${objeto.nome}
-            Rank: ${objeto.rank}
-            Frequência: ${objeto.freq}`;
-            document.querySelector('ul').append(li);
-        };
-
         let input = document.querySelector('input');
-        input.addEventListener('keypress', buscaNome);
+        input.addEventListener('keyup', buscaNome);
 
-        function buscaNome(event) {
-          
+        function buscaNome() {
+
+            armazenaNomes.forEach(function(objeto) {
+                let li = document.createElement('li');
+                li.innerText = `${objeto.nome}
+                Rank: ${objeto.rank}
+                Frequência: ${objeto.freq}`;
+                document.querySelector('ul').append(li);
+            });
         }
+        buscaNome();
     });
