@@ -25,7 +25,7 @@ fetch(requestURL)
         //Create a default Maker//
         const marker = new mapboxgl.Marker({ color: 'black' })
             .setLngLat([-70.939, 25.777])
-            .setPopup (new mapboxgl.Popup().setHTML('<h1>Você está no centro do Triângulo das Bermudas.</h1>'))
+            .setPopup(new mapboxgl.Popup().setHTML('<h1>Você está no centro do Triângulo das Bermudas.</h1>'))
             .addTo(map);
 
         // Add a custom style layer //
@@ -117,7 +117,7 @@ fetch(requestURL)
                 gl.drawArrays(gl.TRIANGLE_STRIP, 0, 3);
             }
         };
-        
+
         // add the custom style layer to the map
         map.on('load', () => {
             map.addLayer(highlightLayer, 'building');
