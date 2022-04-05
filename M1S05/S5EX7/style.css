@@ -1,0 +1,9 @@
+* {
+  margin: 0;
+}
+#personagem {
+  height: 50px;
+  width: 50px;
+  background-color: cornflowerblue;
+  position: absolute;
+}
