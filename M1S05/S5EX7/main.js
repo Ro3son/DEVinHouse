@@ -1,27 +1,29 @@
-let x = 0;
-let y = 0;
+import { movimenta } from "./module/script.js";
+
+let x = 200;
+let y = 200;
+
+const getLocalStorageCoordenadas = localStorage.getItem("coordenadas");
+if (getLocalStorageCoordenadas != null) {
+  const obj = JSON.parse(getLocalStorageCoordenadas);
+  x = obj.x;
+  y = obj.y;
+}
+
 let move = null;
+
 const personagem = document.querySelector("#personagem");
 
+personagem.style.top = y + "px";
+personagem.style.left = x + "px";
+
 setInterval(() => {
-  switch (move) {
-    case "desce":
-      personagem.style.top = ++x + "px";
-      break;
-
-    case "sobe":
-      personagem.style.bottom = ++y + "px";
-      break;
-
-    case "direita":
-      personagem.style.left = ++x + "px";
-      break;
-
-    case "esquerda":
-      personagem.style.right = ++y + "px";
-      break;
-  }
+  movimenta(personagem, move);
 }, 1);
+
+const salvaPosicaoLocalStorage = () => {
+  localStorage.setItem("coordenadas", JSON.stringify({ x: x, y: y }));
+};
 
 function stop() {
   move = false;
@@ -29,6 +31,7 @@ function stop() {
 
 window.addEventListener("keyup", (e) => {
   stop();
+  salvaPosicaoLocalStorage();
 });
 
 window.addEventListener("keydown", (e) => {
