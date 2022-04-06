@@ -1,4 +1,4 @@
-import { movimenta } from "./module/script.js";
+import { movimenta } from "./module/export.js";
 
 let x = 200;
 let y = 200;
@@ -18,7 +18,10 @@ personagem.style.top = y + "px";
 personagem.style.left = x + "px";
 
 setInterval(() => {
-  movimenta(personagem, move);
+  let obj = movimenta(personagem, move, x, y);
+  x = obj.x;
+  y = obj.y;
+  
 }, 1);
 
 const salvaPosicaoLocalStorage = () => {
