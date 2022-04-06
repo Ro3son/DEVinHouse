@@ -1,10 +1,9 @@
-function adicionarSomenteNumeros(...numbers){
+const adicionarSomenteNumeros = (string, str, ...numbers) => {
     let sum = 0;
     
     for (let number of numbers ) {
-        sum += number;
-    }
-    console.log(sum);
+        sum = sum + number;
+    };
     return sum;
 }
-adicionarSomenteNumeros(1, 2, 3, 'string');
+console.log(adicionarSomenteNumeros('Robson', 'Dev', 1, 2, 3)); // 6
