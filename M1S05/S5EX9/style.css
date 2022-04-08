@@ -1,6 +1,14 @@
 *{
   margin: 0;
+  padding: 0;
 }
-div{
-  position: absolute;
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  height: 600px;
+}
+div {
+  position: static;
 }
