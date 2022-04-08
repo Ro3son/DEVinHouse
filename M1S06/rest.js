@@ -1,7 +1,6 @@
 /* Implemente uma função 'saudar' para imprimir (no console) a saudação formal para membros de família real.
 A saudação deve constar o nome da pessoa seguido de todos os títulos de nobreza e realeza, cujos títulos não tem quantidade fixa.
-Exemplo de saudação: 'Olá <nome>, <titulos...>'
-Portanto a função deve receber como argumentos o nome e cada titulo da pessoa.
+Exemplo de saudação: 'Olá <nome>, <titulos...>' Portanto a função deve receber como argumentos o nome e cada titulo da pessoa.
 
 Dicas:
 I) use o operador rest para os parâmetros de títulos e use funções de array para manipulá-los (exemplos: array.forEach(), array.join(), etc...).
