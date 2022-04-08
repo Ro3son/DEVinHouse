@@ -4,7 +4,7 @@ function movimentaDiv(elemento, direcao, x, y) {
   switch (direcao) {
     case "desce":
       elemento.style.top = ++y + "px";
-      if (y > window.innerHeight - 100) { // height of window content area //
+      if (y > window.innerHeight - 100) {
         y = window.innerHeight - 100;
       }
       break;
