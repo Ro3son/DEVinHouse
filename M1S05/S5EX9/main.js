@@ -17,40 +17,26 @@ const getStyle = (xMaximo,yMaximo) => {
 const larguraMaxima = 1000, alturaMaxima = 300;
 
 const divs = ['div1', 'div2', 'div3', 'div4', 'div5'];
-divs.forEach(() => {
+divs.forEach((elemento) => {
     const div = document.createElement("div");
+    div.id = elemento;
     let estilos = getStyle(alturaMaxima,larguraMaxima);
 
-    div.style.border = "5px solid black"; 
     div.style.left = estilos.left;
     div.style.top = estilos.top;
     div.style.height = estilos.height;
     div.style.width = estilos.width;
 
-//     var rect = div.getBoundingClientRect();
-//     if(getStyle(rect)) {
-//         div.style.backgroundColor = 'wheat';
-//     } else {
-//         div.style.backgroundColor = 'lightblue';
-// };
-
     document.body.append(div);
+   
 });
+
+document.body.style.backgroundColor = '#000';
+document.getElementById('div1').style.border = '4px solid orange';
+document.getElementById('div2').style.border = '4px solid lightgreen';
+document.getElementById('div3').style.border = '4px solid lightpink';
+document.getElementById('div4').style.border = '4px solid lightblue';
+document.getElementById('div5').style.border = '4px solid wheat';
+
 // O método Element.getBoundingClientRect() retorna o tamanho de um elemento e sua posição relativa ao viewport. //
 // rect é um objeto DOMRect com seis propriedades: left, top, right, bottom, width, height // mdn
-
-
-// for (let index = 0; index < 5; index++) {
-//     const div = document.createElement("div");
-
-//     let estilos = getStyle(alturaMaxima,larguraMaxima);
-
-//     div.style.border = "5px solid black"; 
-//     div.style.left = estilos.left;
-//     div.style.top = estilos.top;
-//     div.style.height = estilos.height;
-//     div.style.width = estilos.width;
-
-//     document.body.append(div);
-    
-// }
