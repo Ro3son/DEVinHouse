@@ -7,4 +7,4 @@ let arr1 = ['primeiro'];
 function adicionarPrimeiro() {
    return [arr1, ...arr];
 }
-console.log(adicionarPrimeiro(arr1));
+console.log(adicionarPrimeiro());
