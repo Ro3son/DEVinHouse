@@ -10,7 +10,12 @@ async function obterClienteNoBancoDeDados(idCliente) {
 obterClienteNoBancoDeDados();
 
 async function processar() {
-    await obterClienteNoBancoDeDados(7)
+    try {
+         let clientes = await obterClienteNoBancoDeDados(7)
         .then(cliente => console.log(cliente));
+    } catch (error) {
+        console.log(error);
+    }
+   
 }
 console.log(processar());
