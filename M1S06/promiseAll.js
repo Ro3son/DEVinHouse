@@ -32,7 +32,9 @@ function aprovarValorSolicitado( cliente, valor ) {
 
 const cliente = { cpf: 11111111111, nome: 'Calleri', margem: 1000.0 };
 const aprovacaoCadastro = aprovarDadosCadastrais(cliente);
+console.log(aprovacaoCadastro); // Promise { true }
 const aprovacaoValor = aprovarValorSolicitado(cliente, 300.0);
+console.log(aprovacaoValor); // Promise { true }
 
 // continue com o tratamento dos resultados de ambas as promises...
 /*
@@ -43,11 +45,11 @@ const aprovacaoValor = aprovarValorSolicitado(cliente, 300.0);
 
 Promise.all([aprovacaoCadastro, aprovacaoValor])
 .then((values) => {
-  console.log('Resolve', values);
+  console.log('Resolve', values); // Resolve [ true, true ]
 })
 .catch((values) => {
   console.log('Reject', values);
 })
-.finally((values) => {
+.finally(() => {
   console.log('Fim do processameto');
 });
