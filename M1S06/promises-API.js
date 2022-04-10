@@ -9,9 +9,22 @@ https://api.agify.io/?country_id=BR&name=tiago
 Obs.: Se seu nome não constar na base deles (age == null), usar outro nome para os testes.
 */
 
-async function namesAPI() {
-    const requestURL = await fetch('https://api.agify.io/?country_id=BR&name=Robson');
-    const response = await requestURL.json();
-    console.log(`Nome: ${response.name}, Idade Média: ${response.age} anos.`);
-}
-namesAPI();
+const requestURL = 'https://api.agify.io/?country_id=BR&name=Robson';
+
+fetch(requestURL)
+.then((response) => {
+    return response.json();
+})
+.then((dados) => {
+    let objeto = dados;
+    console.log(`Nome: ${objeto.name}, Idade Média: ${objeto.age} anos.`);
+});
+
+// async function namesAPI() {
+//    const requestURL = await fetch('https://api.agify.io/?country_id=BR&name=Robson');
+// console.log(requestURL);
+//    const response = await requestURL.json();
+// console.log(response);
+//     console.log(`Nome: ${response.name}, Idade Média: ${response.age} anos.`);
+//  }
+//  namesAPI();
