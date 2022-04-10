@@ -9,9 +9,9 @@ https://api.agify.io/?country_id=BR&name=tiago
 Obs.: Se seu nome não constar na base deles (age == null), usar outro nome para os testes.
 */
 
-async function namesAPi() {
+async function namesAPI() {
     const requestURL = await fetch('https://api.agify.io/?country_id=BR&name=Robson');
     const response = await requestURL.json();
     console.log(`Nome: ${response.name}, Idade Média: ${response.age} anos.`);
 }
-namesAPi();
+namesAPI();
