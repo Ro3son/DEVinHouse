@@ -19,8 +19,12 @@ d) Para o endereço, use os campos de 'location': 'street' (rua), 'city' (cidade
 e) Está anexado também uma sugestão de estruturação de página HTML para exibição, mas não é obrigatório seguir este exemplo.
 f) Como é uma chamada remota para o serviço, o resultado pode demorar alguns segundos para retornar.
 */
+
+document.body.style.backgroundColor = '#030303';
 const h1 = document.createElement('h1');
 h1.innerText = 'Random User Generator';
+h1.style.textAlign = 'center';
+h1.style.color = 'white';
 document.body.append(h1);
 
 const div = document.createElement('div');
@@ -34,16 +38,17 @@ async function randomUserGenerator() {
 
         let objetos = dados.results;
 
-        console.log(objetos)
-       
-        for (let objeto of objetos) {
-            const li = document.createElement('li');
-            li.src = `${objeto.picture}`;
-            li.innerText = `Nome: ${objeto.name} Localização: ${objeto.location}`;
-            // console.log(objeto.picture);
-            document.getElementById('users').appendChild(li);
+        console.log(objetos);
+
+        let newImage;
+
+        for (let i = 0; i < objetos.length; i++) {
+            newImage = document.createElement('img');
+            newImage.id = 'imgs';
+            newImage.src = dados.results[i].picture.large;
+            newImage.setAttribute('style', 'display: flex; flex-direction: column; padding: 12px; background-color: #19191a');
+            document.getElementById("users").appendChild(newImage);
         }
-        
     } catch (error) {
         console.log(error);
     }
