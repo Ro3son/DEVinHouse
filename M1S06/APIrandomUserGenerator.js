@@ -20,11 +20,8 @@ e) Está anexado também uma sugestão de estruturação de página HTML para ex
 f) Como é uma chamada remota para o serviço, o resultado pode demorar alguns segundos para retornar.
 */
 
-document.body.style.backgroundColor = '#030303';
 const h1 = document.createElement('h1');
 h1.innerText = 'Random User Generator';
-h1.style.textAlign = 'center';
-h1.style.color = 'white';
 document.body.append(h1);
 
 const div = document.createElement('div');
@@ -33,24 +30,47 @@ document.body.append(div);
 
 async function randomUserGenerator() {
     try {
-        const response = await fetch('https://randomuser.me/api/?results=6');
+        const response = await fetch('https://randomuser.me/api/?results=4');
         const dados = await response.json();
+        const objetos = dados.results;
+        exibir(objetos);
 
-        let objetos = dados.results;
-
-        console.log(objetos);
-
-        let newImage;
-
-        for (let i = 0; i < objetos.length; i++) {
-            newImage = document.createElement('img');
-            newImage.id = 'imgs';
-            newImage.src = dados.results[i].picture.large;
-            newImage.setAttribute('style', 'display: flex; flex-direction: column; padding: 12px; background-color: #19191a');
-            document.getElementById("users").appendChild(newImage);
-        }
     } catch (error) {
         console.log(error);
     }
 }
+const exibir = (objetos) => {
+    console.log(objetos);
+    const div = document.querySelector('#users');
+    objetos.forEach((obj) => {
+        const divUser = document.createElement('div');
+        divUser.className = 'users';
+        divUser.innerHTML = `<img src=${obj.picture.large} />
+        <div>
+          <p>${obj.name.title} ${obj.name.first} ${obj.name.last}</p>
+          <p>${obj.email}</p>
+          <p>${obj.location.state} ${obj.location.country}</p>
+        </div>`;
+        div.appendChild(divUser);
+    });
+}
 randomUserGenerator();
+
+// Separar a busca do que se quer exibir //
+// InnerHTML não é uma prática pois gera problemas de memória //
+
+//         let newDiv;
+
+//         for (let obj of objetos) {
+//         const div = document.querySelector('#users');
+//         newDiv = document.createElement('div');
+//         newDiv.className = 'users';
+//         newDiv.innerHTML = `<img src=${obj.picture.large} />
+//         <div>
+//           <p>${obj.name.title} ${obj.name.first} ${obj.name.last}</p>
+//           <p>${obj.email}</p>
+//           <p>${obj.location} ${obj.location.state} ${obj.location.country}</p>
+//         </div>`;
+//         div.appendChild(newDiv);
+
+// }
