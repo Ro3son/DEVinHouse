@@ -15,7 +15,9 @@ document.body.appendChild(inputColor);
 document.body.appendChild(inputNumber);
 document.body.appendChild(button);
 
-const valorStorage = localStorage.getItem('conjuntoDeValores1');
+let cores = 0;
+
+const valorStorage = localStorage.getItem('valorStorage');
 
 let resultadoPreferencias = [];
 
@@ -23,13 +25,27 @@ if (valorStorage != null) {
     const objConjuntoValores = JSON.parse(valorStorage);
     resultadoPreferencias = objConjuntoValores;
 
-    mudaCor(objConjuntoValores.corDeFundo, objConjuntoValores.tempo);
-}
+    // mudaCor(objConjuntoValores.corDeFundo, objConjuntoValores.tempo);
+    inicia();
+};
+
+
+function inicia() {
+    document.body.style.backgroundColor = resultadoPreferencias[cores].backgroundColor;
+    setTimeout(function () {
+        cores++;
+        if (cores == resultadoPreferencias.length) {
+            cores = 0;
+        } // else {
+        inicia();
+    }, resultadoPreferencias[cores].tempoCor * 1000);
+};
 
 function mudaCor(cor, tempo) {
     document.body.style.background = cor;
     setTimeout(function () {
-        document.body.append(tempo);
+        console.log('Aguardando tempo da cor');
+        // document.body.style.background = preferencias[0].corDeFundo;
     }, tempo * 1000);
 }
 
@@ -39,12 +55,16 @@ botao.addEventListener('click', addCor);
 function addCor() {
     const cor = document.getElementById('cor').value;
     const tempo = document.getElementById('tempo').value;
+    document.querySelector('#cor').value = '#000000';
+    document.querySelector('#tempo').value = '';
     mudaCor(cor, tempo);
     const conjunto = {
         'backgroundColor': cor,
-        'tempo': tempo,
+        'tempoCor': tempo,
     }
-    const conjuntoEmString = JSON.stringify(conjunto);
+    resultadoPreferencias.push(conjunto);
 
-    localStorage.setItem('conjuntoDeValores', conjuntoEmString)
+    const conjuntoEmString = JSON.stringify(resultadoPreferencias);
+
+    localStorage.setItem('valorStorage', conjuntoEmString);
 }
